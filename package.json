@@ -1,0 +1,27 @@
+{
+  "name": "davadiled-oficial",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint . --ext .js",
+    "lintfix": "eslint . --ext .js --fix"
+  },
+  "dependencies": {
+    "nuxt": "^3.13.0",
+    "pinia": "^3.0.2",
+    "vuetify": "^3.5.7"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^1.4.1",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "eslint": "^9.27.0",
+    "eslint-define-config": "^2.1.0",
+    "eslint-plugin-vue": "^10.1.0",
+    "vue-eslint-parser": "^10.1.3"
+  }
+}
