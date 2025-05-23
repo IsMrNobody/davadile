@@ -10,7 +10,7 @@
       <nav class="flex items-center justify-between h-20">
         <NuxtLink to="/" class="flex items-center">
           <span
-            class="text-2xl font-bold"
+            class="text-2xl font-bold transition-colors duration-300"
             :class="scrolled ? 'text-white' : 'text-black'"
           >
             Dava<span class="text-primary-500">di</span
@@ -39,7 +39,7 @@
               :class="
                 scrolled
                   ? 'text-white hover:text-primary-400'
-                  : 'text-white hover:text-primary-400'
+                  : 'text-black hover:text-primary-400'
               "
             >
               Productos
@@ -95,7 +95,7 @@
             :class="
               scrolled
                 ? 'text-white hover:text-primary-400'
-                : 'text-white hover:text-primary-400'
+                : 'text-black hover:text-primary-400'
             "
           >
             Contacto
@@ -104,7 +104,8 @@
 
         <!-- Mobile menu button -->
         <button
-          class="md:hidden text-white focus:outline-none"
+          class="md:hidden focus:outline-none"
+          :class="scrolled ? 'text-white' : 'text-black'"
           @click="toggleMobileMenu"
         >
           <span v-if="!mobileMenuOpen" class="block h-6 w-6">
@@ -144,8 +145,8 @@
     <!-- Mobile menu -->
     <div
       v-if="mobileMenuOpen"
-      class="md:hidden bg-dark bg-opacity-95 overflow-hidden transition-all duration-300"
-      :class="mobileMenuOpen ? 'max-h-screen py-4' : 'max-h-0 py-0'"
+      class="md:hidden overflow-hidden transition-all duration-300"
+      :class="[mobileMenuOpen ? 'max-h-screen py-4' : 'max-h-0 py-0', scrolled ? 'bg-black' : 'bg-white']"
     >
       <div class="container mx-auto px-4">
         <NuxtLink
@@ -160,7 +161,8 @@
         <div class="relative">
           <button
             @click="toggleMobileProductsMenu"
-            class="w-full flex justify-between items-center py-3 text-white hover:text-primary-400 text-lg"
+            class="w-full flex justify-between items-center py-3 text-lg transition-colors duration-300"
+            :class="scrolled ? 'text-white hover:text-primary-400' : 'text-black hover:text-primary-400'"
           >
             Productos
             <svg
@@ -183,7 +185,8 @@
               v-for="category in productCategories"
               :key="category.path"
               :to="category.path"
-              class="block py-2 text-white hover:text-primary-400 text-lg"
+              class="block py-2 text-lg transition-colors duration-300"
+              :class="scrolled ? 'text-white hover:text-primary-400' : 'text-black hover:text-primary-400'"
               @click="closeMobileMenu"
             >
               {{ category.name }}
@@ -193,7 +196,8 @@
 
         <NuxtLink
           to="/iluminacion-hogar"
-          class="block py-3 text-white hover:text-primary-400 text-lg"
+          class="block py-3 text-lg transition-colors duration-300"
+          :class="scrolled ? 'text-white hover:text-primary-400' : 'text-black hover:text-primary-400'"
           @click="closeMobileMenu"
         >
           Iluminación para el Hogar
@@ -201,7 +205,8 @@
 
         <NuxtLink
           to="/nosotros"
-          class="block py-3 text-white hover:text-primary-400 text-lg"
+          class="block py-3 text-lg transition-colors duration-300"
+          :class="scrolled ? 'text-white hover:text-primary-400' : 'text-black hover:text-primary-400'"
           @click="closeMobileMenu"
         >
           Nosotros
@@ -209,7 +214,8 @@
 
         <NuxtLink
           to="/contacto"
-          class="block py-3 text-white hover:text-primary-400 text-lg"
+          class="block py-3 text-lg transition-colors duration-300"
+          :class="scrolled ? 'text-white hover:text-primary-400' : 'text-black hover:text-primary-400'"
           @click="closeMobileMenu"
         >
           Contacto
@@ -271,16 +277,19 @@ const handleScroll = () => {
 .bg-dark {
   background-color: var(--dark-color);
 }
-
+.bg-black {
+  background-color: #111 !important;
+}
+.bg-white {
+  background-color: #fff !important;
+}
 .text-primary-400,
 .text-primary-500 {
   color: var(--primary-color);
 }
-
 .text-secondary-500 {
   color: var(--secondary-color);
 }
-
 .hover\:bg-primary-500:hover {
   background-color: var(--primary-color);
 }

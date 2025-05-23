@@ -2,7 +2,7 @@
   <footer class="bg-dark-900 text-white py-12">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="space-y-3">
+        <div>
           <h3 class="text-xl font-bold mb-6">Davadiled</h3>
           <p class="text-gray-400 mb-6">
             Expertos en iluminación LED para el hogar. Ofrecemos soluciones de iluminación modernas, eficientes y de alta calidad.
