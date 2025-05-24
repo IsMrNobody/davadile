@@ -11,10 +11,10 @@
         <NuxtLink to="/" class="flex items-center">
           <span
             class="text-2xl font-bold transition-colors duration-300"
-            :class="scrolled ? 'text-white' : 'text-black'"
+            :class="scrolled ? 'text-white' : 'text-primary'"
           >
-            Dava<span class="text-primary-500">di</span
-            ><span class="text-secondary-500">led</span>
+            Dava<span class="text-secondary">di</span
+            ><span class="text-accent">led</span>
           </span>
         </NuxtLink>
 

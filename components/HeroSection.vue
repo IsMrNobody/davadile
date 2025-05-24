@@ -76,7 +76,7 @@
 }
 
 .text-primary-500 {
-  color: var(--primary-color);
+  color: var(--white-color);
 }
 
 .text-secondary-500 {

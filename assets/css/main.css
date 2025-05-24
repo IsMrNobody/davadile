@@ -10,7 +10,9 @@
   --error-color: #ef4444;
   --text-dark: #1a1a1a;
   --text-light: #ffffff;
-  --text-green: #00ff7e;
+  --text-gren: #00ff7e;
+  --text-yell: #ffee00;
+
   --container-max-width: 1200px;
 }
 
